@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar"
 import TattooCard from '../components/TattooCard'
 import {tattoos} from '../data/tattoos'
+import '../index.css'
 import { useState } from 'react'
+
 
 
 
@@ -76,15 +78,17 @@ function Gallery() {
                     Filtro actual: {filter}
                 </p>
 
-                <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+               <div className="tattoo-grid mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {filteredTattoos.map((tattoo) => (
-                        <TattooCard
-                            key={`${filter}-${tattoo.title}`}
-                            title={tattoo.title}
-                            style={tattoo.style}
-                            image={tattoo.image}
-                        />
+                        <div className="tattoo-card" key={`${filter}-${tattoo.title}`}>
+                            <TattooCard
+                                title={tattoo.title}
+                                style={tattoo.style}
+                                image={tattoo.image}
+                            />
+                        </div>
                     ))}
+              
                     
                    
                 </div>

@@ -24,7 +24,7 @@ return (
                 <img
                     src={tattoo.image}
                     alt={tattoo.title}
-                    className="h-full max-h-[600px] w-full object-cover"
+                    className="tattoo-image-enter h-full max-h-150 w-full object-cover"
                 />
             </div>
 
