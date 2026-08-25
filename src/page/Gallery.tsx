@@ -1,30 +1,9 @@
 import Navbar from "../components/Navbar"
 import TattooCard from '../components/TattooCard'
-import blackwork from '../assets/Tattoos/blackwork.jpg'
-import realismo from '../assets/Tattoos/Realismo.jpg'
-import minimalista from '../assets/Tattoos/minimalista.jpg'
+import {tattoos} from '../data/tattoos'
 import { useState } from 'react'
 
 
-const tattoos =[
-    {
-        title: 'Blackwork',
-        style: 'Tinta negra',
-        image:  blackwork,
-
-    },
-    {
-        title: 'Realismo',
-        style: 'Alto detalle',
-        image:  realismo,
-    },
-    {
-        title: 'Minimalista',
-        style: 'LInea fina',
-        image:  minimalista,
-
-    }
-]
 
 
 function Gallery() {

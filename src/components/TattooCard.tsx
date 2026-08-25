@@ -1,3 +1,6 @@
+import{useNavigate}from"react-router-dom";
+
+
 type TattoCardProps = {
   title: string
   style: string
@@ -5,6 +8,9 @@ type TattoCardProps = {
 }
 
 function TattoCard({ title, style, image }: TattoCardProps) {
+
+  const navigate = useNavigate();
+
   return (
     <article className="group overflow-hidden rounded-2xl bg-zinc-900 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
@@ -26,9 +32,12 @@ function TattoCard({ title, style, image }: TattoCardProps) {
                 {style}
               </p>
 
-              <button className="mt-4 rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-500">
+             <button
+                onClick={() => navigate(`/tattoo/${title.toLowerCase()}`)}
+                className="mt-4 rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-500"
+              >
                 Ver tatuaje →
-              </button>
+            </button>
               
           </div>
 
