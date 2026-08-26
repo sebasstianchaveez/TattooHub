@@ -44,10 +44,42 @@ return (
 
                     <div className="my-8 h-px bg-zinc-800" />
 
-                    <p className="leading-7 text-zinc-300">
-                        Descubre este estilo de tatuaje y conoce más sobre el trabajo
-                        artístico detrás de esta pieza.
+                    <p className="leading-7 text-1xl text-zinc-300">
+                       {tattoo.description}
                     </p>
+
+
+                    <div className="mt-8 grid grid-cols-2 gap-4">
+
+                    <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
+                        <p className="text-sm text-zinc-500">Detalle</p>
+                        <p className="mt-1 font-semibold text-white">
+                        {tattoo.detail}
+                        </p>
+                    </div>
+
+                    <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
+                        <p className="text-sm text-zinc-500">Ubicación</p>
+                        <p className="mt-1 font-semibold text-white">
+                        {tattoo.placement}
+                        </p>
+                    </div>
+
+                    <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
+                        <p className="text-sm text-zinc-500">Duración</p>
+                        <p className="mt-1 font-semibold text-white">
+                        {tattoo.duration}
+                        </p>
+                    </div>
+
+                    <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
+                        <p className="text-sm text-zinc-500">Dificultad</p>
+                        <p className="mt-1 font-semibold text-white">
+                        {tattoo.difficulty}
+                        </p>
+                    </div>
+
+                    </div>
 
                     <button
                         onClick={() => window.history.back()}
