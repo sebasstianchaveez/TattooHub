@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar'
+import{Link} from 'react-router-dom'
 import TattooCard from '../components/TattooCard'
 import blackwork from '../assets/Tattoos/blackwork.jpg'
 import realismo from '../assets/Tattoos/Realismo.jpg'
@@ -24,9 +25,12 @@ function Home (){
             Encuentra inspiración y descubre tatuadores increíbles.
         </p>
 
-        <button className="mt-6 rounded-lg bg-white px-6 py-3 font-semibold text-black transition hover:scale-105 hover:bg-red-600 hover:text-white">
+        <Link
+            to="/Gallery"
+            className="mt-6 inline-block rounded-lg bg-white px-6 py-3 font-semibold text-black transition hover:scale-105 hover:bg-red-600 hover:text-white" >
+                                                                                                                                                                               
             Explorar tatuajes
-        </button>
+        </Link>
 
         <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3">
             <TattooCard
