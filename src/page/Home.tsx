@@ -4,6 +4,7 @@ import TattooCard from '../components/TattooCard'
 import blackwork from '../assets/Tattoos/blackwork.jpg'
 import realismo from '../assets/Tattoos/Realismo.jpg'
 import minimalista from '../assets/Tattoos/minimalista.jpg'
+import Caro from '../assets/Tattoos/Caro.jpg'
 
 
 
@@ -32,11 +33,17 @@ function Home (){
             Explorar tatuajes
         </Link>
 
-        <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="home-grid">
             <TattooCard
                 title="Blackwork"
                 style="Tinta negra"
                 image={blackwork}
+            />
+
+             <TattooCard
+                title="Caro"
+                style="Línea fina"
+                image={Caro}
             />
 
             <TattooCard
@@ -50,6 +57,7 @@ function Home (){
                 style="Línea fina"
                 image={minimalista}
             />
+           
         </div>
     </section>
   </main>

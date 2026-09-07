@@ -33,12 +33,108 @@ body {
 
 .nav-link:hover::after{
   transform:scalex(1);
+ 
 }
+/*contendor de tattocard*/
+.tattoo-card {
+  overflow: hidden;
+  border-radius: 0px;
+  background: transparent;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.tattoo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.tattoo-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.tattoo-image {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tattoo-card:hover .tattoo-image {
+  transform: scale(1.05);
+}
+
+.tattoo-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition:opacity 0.5s ease,background 0.5s ease;
+}
+
+.tattoo-card:hover .tattoo-overlay {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.tattoo-content {
+  transform: translateY(24px);
+  transition: transform 0.5s ease;
+}
+
+.tattoo-card:hover .tattoo-content {
+  transform: translateY(0);
+}
+
+.home-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  justify-content: center;
+}
+
+
+
+
+
+
+
 
 /* Animación de entrada para las tarjetas */
 .tattoo-card {
   animation: tattooEnter 0.6s ease-out both;
+  
 }
+
+.tattoo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/*efecto zoom card*/
+
+
+.detail-image-container {
+  overflow: hidden;
+ 
+}
+
+.detail-image {
+  display: block;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.detail-image-container:hover .detail-image{
+  transform: scale(1.02);
+}
+
 
 @keyframes tattooEnter {
   from {
@@ -52,8 +148,37 @@ body {
   }
 }
 
+
+  
+  /*estilo card*/
+  .tattoo-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4,220px);
+    gap: 0px;
+    justify-content: center;
+
+  }
+
+  @media(min-width :768px){
+
+    .tattoo-grid{
+      grid-template-columns: repeat(2,minimax(0,1fr));
+
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .tattoo-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+
+
+
 /* Animación de entrada para la imagen del detalle */
-.tattoo-image-enter {
+.detail-image-container {
   animation: imageEnter 0.8s ease-out both;
 }
 

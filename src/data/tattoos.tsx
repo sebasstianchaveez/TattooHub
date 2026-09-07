@@ -1,6 +1,7 @@
 import blackwork from '../assets/Tattoos/blackwork.jpg'
 import realismo from '../assets/Tattoos/Realismo.jpg'
 import minimalista from '../assets/Tattoos/minimalista.jpg'
+import Caro from '../assets/Tattoos/Caro.jpg'
 
 export const tattoos = [
   {
@@ -39,4 +40,18 @@ export const tattoos = [
     difficulty: 'Intermedio',
     image: minimalista,
   },
+
+  {
+    id: 'caro',
+    title: 'Caro',
+    style: 'Tinta negra y colores',
+    description: 
+    'El estilo Caro se caracteriza por su uso de colores vibrantes, diseños clásicos y motivos simbólicos.',
+    detail: 'Colores vibrantes',
+    placement: ' espalda',
+    duration: '4 - 8 horas',
+    difficulty: 'Intermedio',
+    image: Caro,
+  }
 ]
+ 

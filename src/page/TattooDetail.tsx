@@ -20,11 +20,11 @@ return (
 
         <div className="grid gap-10 md:grid-cols-2">
 
-            <div className="overflow-hidden rounded-2xl">
+            <div className="detail-image-container">
                 <img
                     src={tattoo.image}
                     alt={tattoo.title}
-                    className="tattoo-image-enter h-full max-h-150 w-full object-cover"
+                    className="detail-image  h-full max-h-150 w-full object-cover"
                 />
             </div>
 

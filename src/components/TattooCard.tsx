@@ -12,18 +12,18 @@ function TattoCard({ title, style, image }: TattoCardProps) {
   const navigate = useNavigate();
 
   return (
-    <article className="group overflow-hidden rounded-2xl bg-zinc-900 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    <article className="tattoo-card">
 
-     <div className="relative overflow-hidden">
+     <div className="tattoo-image-container">
         <img
           src={image}
           alt={title}
-          className="h-72 w-full object-cover"
+          className="tattoo-image"
         />
 
-        <div className="absolute inset-0 flex items-end bg-black/0 p-6 opacity-0 transition-all duration-500 group-hover:bg-black/50 group-hover:opacity-100">
+        <div className=" tattoo-overlay">
 
-          <div className="translate-y-6 transition-transform duration-500 group-hover:translate-y-0">
+          <div className="tattoo-content">
               <h2 className="text-2xl font-bold text-white">
                 {title}
               </h2>
@@ -45,9 +45,7 @@ function TattoCard({ title, style, image }: TattoCardProps) {
 
       </div>
 
-      <div className="p-5">
-        <p className="text-white">{style}</p>
-      </div>
+   
 
 
 
