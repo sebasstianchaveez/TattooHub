@@ -193,3 +193,37 @@ body {
     transform: translateY(0);
   }
 }
+
+/* HERO TATTOOHUB */
+
+.hero-banner {
+  width: calc(100% + 5rem);
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
+  min-height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Aparición cinematográfica del video */
+
+.hero-video {
+  opacity: 0;
+  transform: scale(1.04);
+
+  animation: heroVideoReveal 2.5s ease-out forwards;
+}
+
+@keyframes heroVideoReveal {
+
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+
+}
